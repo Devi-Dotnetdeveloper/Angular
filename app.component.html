@@ -1,0 +1,16 @@
+<h1>Hello Beautiful world</h1>
+
+<input type="text" [(ngModel)]="language" />
+<p>My Language is:{{ language }}</p>
+<button (click)="addlanguage()">Add</button>
+<button (click)="deletefirst()">Delete First</button>
+<p>All Languages</p>
+<ul>
+  <li *ngFor="let lang of listofLanguages">
+    {{ lang }}
+  </li>
+</ul>
+
+<strong *ngIf="listofLanguages.length > 3"
+  >Congratulations!!! You Know the more than 3 language over the world
+</strong>
